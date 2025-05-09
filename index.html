@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,18 +18,14 @@
             --text-light: #ffffff;
             --card-bg: rgba(255, 255, 255, 0.95);
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
+
         body {
             background-color: #f8f9fa;
             color: #333;
@@ -36,7 +33,7 @@
             background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%234a6baf' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
             background-attachment: fixed;
         }
-        
+
         .section {
             min-height: 100vh;
             padding: 5rem 2rem;
@@ -47,17 +44,17 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             overflow: hidden;
         }
-        
+
         .section:nth-child(odd) {
             background: var(--gradient-1);
             color: var(--text-light);
         }
-        
+
         .section:nth-child(even) {
             background: var(--gradient-2);
             color: var(--text-light);
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -65,7 +62,7 @@
             position: relative;
             z-index: 1;
         }
-        
+
         .title {
             font-size: 3.5rem;
             color: var(--text-light);
@@ -75,7 +72,7 @@
             font-weight: bold;
             letter-spacing: 1px;
         }
-        
+
         .subtitle {
             font-size: 2.2rem;
             color: var(--text-light);
@@ -84,7 +81,7 @@
             position: relative;
             display: inline-block;
         }
-        
+
         .subtitle::after {
             content: '';
             position: absolute;
@@ -95,11 +92,11 @@
             background-color: var(--accent);
             border-radius: 2px;
         }
-        
+
         .text-center {
             text-align: center;
         }
-        
+
         .author-info {
             margin: 1.5rem 0;
             font-size: 1.3rem;
@@ -109,18 +106,18 @@
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        
+
         .flex-container {
             display: flex;
             justify-content: space-between;
             gap: 2rem;
             flex-wrap: wrap;
         }
-        
+
         .flex-column {
             flex-direction: column;
         }
-        
+
         .card {
             background-color: var(--card-bg);
             border-radius: 12px;
@@ -129,17 +126,16 @@
             margin-bottom: 1.8rem;
             flex: 1;
             min-width: 300px;
-            transition: all 0.3s ease;
             color: var(--dark);
             border-top: 5px solid var(--accent);
         }
-        
+
         .feature-card {
             background: linear-gradient(135deg, #6c5ce7, #a29bfe);
             color: white;
             border-top: 5px solid white;
         }
-        
+
         .navigation {
             position: fixed;
             top: 1.5rem;
@@ -153,21 +149,20 @@
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         .navigation ul {
             list-style: none;
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
         }
-        
+
         .navigation a {
             text-decoration: none;
             color: var(--text-light);
             font-weight: 500;
             padding: 0.6rem 1rem;
             border-radius: 6px;
-            transition: all 0.3s ease;
             display: block;
             font-size: 0.95rem;
             letter-spacing: 0.5px;
@@ -184,20 +179,20 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             border-left: 4px solid var(--accent);
         }
-        
+
         .code-container pre {
             white-space: pre-wrap;
         }
-        
+
         .highlight {
             color: #50fa7b;
             font-weight: bold;
         }
-        
+
         .accent {
             color: #ffb86c;
         }
-        
+
         table {
             width: 100%;
             border-collapse: separate;
@@ -207,16 +202,19 @@
             overflow: hidden;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
-        
-        table, th, td {
+
+        table,
+        th,
+        td {
             border: none;
         }
-        
-        th, td {
+
+        th,
+        td {
             padding: 1rem;
             text-align: left;
         }
-        
+
         th {
             background: linear-gradient(135deg, #6c5ce7, #a29bfe);
             color: white;
@@ -225,19 +223,19 @@
             text-transform: uppercase;
             font-size: 0.9rem;
         }
-        
+
         tr:nth-child(even) {
             background-color: rgba(255, 255, 255, 0.95);
         }
-        
+
         tr:nth-child(odd) {
             background-color: rgba(245, 245, 245, 0.95);
         }
-        
+
         td {
             color: #333;
         }
-        
+
         .btn {
             display: inline-block;
             background: linear-gradient(135deg, #6c5ce7, #a29bfe);
@@ -247,18 +245,17 @@
             text-decoration: none;
             font-weight: 600;
             margin: 1.5rem 0;
-            transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
             letter-spacing: 1px;
             text-transform: uppercase;
             font-size: 0.9rem;
         }
-        
+
         .step-container {
             counter-reset: step-counter;
             padding: 1rem;
         }
-        
+
         .step {
             margin-bottom: 2rem;
             position: relative;
@@ -268,7 +265,7 @@
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
+
         .step::before {
             content: counter(step-counter);
             counter-increment: step-counter;
@@ -288,22 +285,21 @@
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
             font-size: 1.2rem;
         }
-        
+
         .feature-icon {
             font-size: 3rem;
             margin-bottom: 1.5rem;
             color: var(--accent);
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
-        
+
         .architecture-diagram {
             display: flex;
             justify-content: center;
             align-items: center;
             margin: 3rem 0;
-            perspective: 1000px;
         }
-        
+
         .server-client-box {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 12px;
@@ -312,12 +308,10 @@
             width: 320px;
             text-align: center;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            transform-style: preserve-3d;
-            transition: transform 0.5s ease;
             border-top: 5px solid var(--accent);
             color: var(--dark);
         }
-        
+
         .server-client-box h3 {
             color: var(--primary);
             font-size: 1.5rem;
@@ -325,7 +319,7 @@
             position: relative;
             display: inline-block;
         }
-        
+
         .server-client-box h3::after {
             content: '';
             position: absolute;
@@ -337,38 +331,38 @@
             background-color: var(--accent);
             border-radius: 3px;
         }
-        
+
         .server-client-box ul {
             text-align: left;
             margin-top: 1.5rem;
             list-style-type: none;
         }
-        
+
         .server-client-box li {
             padding: 0.5rem 0;
             border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
             position: relative;
             padding-left: 1.5rem;
         }
-        
+
         .server-client-box li::before {
             content: '➤';
             position: absolute;
             left: 0;
             color: var(--primary);
         }
-        
+
         .connection-line {
             height: 4px;
             background: linear-gradient(90deg, var(--accent), var(--primary));
             width: 120px;
             margin-top: 75px;
             border-radius: 2px;
-            position: relative;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
-        .connection-line::before, .connection-line::after {
+
+        .connection-line::before,
+        .connection-line::after {
             content: '';
             position: absolute;
             top: -3px;
@@ -377,16 +371,16 @@
             border-radius: 50%;
             background-color: var(--accent);
         }
-        
+
         .connection-line::before {
             left: -5px;
         }
-        
+
         .connection-line::after {
             right: -5px;
             background-color: var(--primary);
         }
-        
+
         .testimonial {
             font-style: italic;
             padding: 2rem;
@@ -398,7 +392,7 @@
             position: relative;
             color: var(--dark);
         }
-        
+
         .testimonial::before {
             content: '"';
             position: absolute;
@@ -408,8 +402,25 @@
             color: rgba(0, 0, 0, 0.05);
             font-family: Georgia, serif;
         }
+
+        .code-container .keyword {
+            color: #ff79c6;
+        }
+
+        .code-container .function {
+            color: #50fa7b;
+        }
+
+        .code-container .string {
+            color: #f1fa8c;
+        }
+
+        .code-container .comment {
+            color: #6272a4;
+        }
     </style>
 </head>
+
 <body>
     <section id="home" class="section">
         <div class="container text-center">
@@ -421,7 +432,8 @@
                 <p>IIT Goa</p>
             </div>
             <div class="card">
-                <p>A real-time networked quiz application using C++ socket programming with advanced features for classroom assessment and competition.</p>
+                <p>A real-time networked quiz application using C++ socket programming with advanced features for
+                    classroom assessment and competition.</p>
             </div>
             <a href="#overview" class="btn">Computer Networks Project</a>
         </div>
@@ -433,11 +445,13 @@
             <div class="flex-container">
                 <div class="card">
                     <h3>What is it?</h3>
-                    <p>An interactive multiplayer quiz game that allows students to participate in real-time quizzes, compete against each other, and chat while waiting for the quiz to start.</p>
+                    <p>An interactive multiplayer quiz game that allows students to participate in real-time quizzes,
+                        compete against each other, and chat while waiting for the quiz to start.</p>
                 </div>
                 <div class="card">
                     <h3>Why build it?</h3>
-                    <p>To create an engaging educational tool that demonstrates network programming concepts while providing a useful classroom assessment platform. <strong><b>(CS212 Project)</b></strong></p>
+                    <p>To create an engaging educational tool that demonstrates network programming concepts while
+                        providing a useful classroom assessment platform. <strong><b>(CS212 Project)</b></strong></p>
                 </div>
                 <div class="card">
                     <h3>Core Technologies</h3>
@@ -562,7 +576,8 @@
                         </tr>
                         <tr>
                             <td>Quiz Manager</td>
-                            <td>Loads questions from JSON files (setA.json/setB.json) and randomizes for each session</td>
+                            <td>Loads questions from JSON files (setA.json/setB.json) and randomizes for each session
+                            </td>
                         </tr>
                         <tr>
                             <td>Result Recorder</td>
@@ -621,24 +636,32 @@
                 <div class="card">
                     <h3>Server Implementation Highlights</h3>
                     <ul>
-                        <li><span class="highlight">Multi-threading:</span> Each client is handled in a separate thread for concurrent operation</li>
-                        <li><span class="highlight">JSON Integration:</span> Question sets are loaded from JSON files</li>
-                        <li><span class="highlight">Chat Broadcasting:</span> Messages are relayed to all clients except the sender</li>
-                        <li><span class="highlight">Randomization:</span> Both questions and answer options are randomized</li>
-                        <li><span class="highlight">Result Persistence:</span> Quiz results stored with timestamps in JSON format</li>
+                        <li><span class="highlight">Multi-threading:</span> Each client is handled in a separate thread
+                            for concurrent operation</li>
+                        <li><span class="highlight">JSON Integration:</span> Question sets are loaded from JSON files
+                        </li>
+                        <li><span class="highlight">Chat Broadcasting:</span> Messages are relayed to all clients except
+                            the sender</li>
+                        <li><span class="highlight">Randomization:</span> Both questions and answer options are
+                            randomized</li>
+                        <li><span class="highlight">Result Persistence:</span> Quiz results stored with timestamps in
+                            JSON format</li>
                     </ul>
                 </div>
                 <div class="card">
                     <h3>Client Implementation Highlights</h3>
                     <ul>
-                        <li><span class="highlight">Non-blocking I/O:</span> For chat reception without blocking the main thread</li>
-                        <li><span class="highlight">Timer Implementation:</span> 10-second countdown with visual feedback</li>
-                        <li><span class="highlight">Multi-threaded Reception:</span> Separate thread for receiving broadcast messages</li>
+                        <li><span class="highlight">Non-blocking I/O:</span> For chat reception without blocking the
+                            main thread</li>
+                        <li><span class="highlight">Timer Implementation:</span> 10-second countdown with visual
+                            feedback</li>
+                        <li><span class="highlight">Multi-threaded Reception:</span> Separate thread for receiving
+                            broadcast messages</li>
                         <li><span class="highlight">Error Handling:</span> Graceful handling of connection issues</li>
                     </ul>
                 </div>
             </div>
-            
+
             <div class="card">
                 <h3>Key Technical Features</h3>
                 <table>
@@ -696,7 +719,7 @@ g++ -o client client.cpp</pre>
                     </div>
                 </div>
             </div>
-            
+
             <div class="card">
                 <h3>Running the Server</h3>
                 <div class="step-container">
@@ -720,7 +743,7 @@ g++ -o client client.cpp</pre>
                     </div>
                 </div>
             </div>
-            
+
             <div class="card">
                 <h3>Running the Client</h3>
                 <div class="step-container">
@@ -748,8 +771,6 @@ g++ -o client client.cpp</pre>
                     </div>
                 </div>
             </div>
-            
-            </div>
         </div>
     </section>
 
@@ -760,10 +781,14 @@ g++ -o client client.cpp</pre>
                 <div class="card">
                     <h3>System Performance</h3>
                     <ul>
-                        <li><span class="highlight">Concurrency:</span> Successfully tested with 10+ simultaneous clients</li>
-                        <li><span class="highlight">Response Time:</span> Average message delivery under 100ms on LAN</li>
-                        <li><span class="highlight">Synchronization:</span> Question timing variance less than 50ms between clients</li>
-                        <li><span class="highlight">Stability:</span> Resilient against network fluctuations and client disconnections</li>
+                        <li><span class="highlight">Concurrency:</span> Successfully tested with 10+ simultaneous
+                            clients</li>
+                        <li><span class="highlight">Response Time:</span> Average message delivery under 100ms on LAN
+                        </li>
+                        <li><span class="highlight">Synchronization:</span> Question timing variance less than 50ms
+                            between clients</li>
+                        <li><span class="highlight">Stability:</span> Resilient against network fluctuations and client
+                            disconnections</li>
                     </ul>
                 </div>
                 <div class="card">
@@ -776,7 +801,7 @@ g++ -o client client.cpp</pre>
                     </ul>
                 </div>
             </div>
-            
+
             <div class="card">
                 <h3>Sample Rankings Output</h3>
                 <div class="code-container">
@@ -794,13 +819,16 @@ g++ -o client client.cpp</pre>
 
     <section id="future" class="section">
         <div class="container">
-            <h2 class="subtitle">Browser-Based Quiz Application with Flask (Additionally) <h3>A networked quiz system accessible via web browsers</h3></h2>
+            <h2 class="subtitle">Browser-Based Quiz Application with Flask (Additionally) <h3>A networked quiz system
+                    accessible via web browsers</h3>
+            </h2>
             <div class="flex-container">
                 <div class="card">
                     <h3>Flask Web Server</h3>
                     <ul>
                         <li>Serves login page and handles authentication, Connects to C++ server via sockets</li>
-                        <li>Renders quiz interface for users, TCP sockets for reliable communication</li>
+                        <li>Renders quiz interface for users, TCP sockets for reliable communicati
+                            on</li>
                         <li>Flask handles the web interface (10.196.33.0:5000)</li>
                         <li>Simple login process</li>
                     </ul>
@@ -835,18 +863,21 @@ g++ -o client client.cpp</pre>
             <div class="card">
                 <h3>Project Achievements</h3>
                 <ul>
-                    <li>Successfully implemented a functional multiplayer quiz system with client-server architecture</li>
+                    <li>Successfully implemented a functional multiplayer quiz system with client-server architecture
+                    </li>
                     <li>Demonstrated practical application of socket programming and multi-threading concepts</li>
-                    <li>Created a robust system with chat functionality, quiz type selection, and result persistence</li>
+                    <li>Created a robust system with chat functionality, quiz type selection, and result persistence
+                    </li>
                     <li>Developed randomization and timing mechanisms for fair gameplay</li>
                     <li>Built a system that can serve as both educational tool and assessment platform</li>
                 </ul>
             </div>
-            
+
             <div class="testimonial">
-                "This project provided hands-on experience with network programming principles while creating a practical application that can enhance classroom learning experiences."
+                "This project provided hands-on experience with network programming principles while creating a
+                practical application that can enhance classroom learning experiences."
             </div>
-            
+
             <div class="card">
                 <h3>Key Learnings</h3>
                 <ul>
@@ -857,7 +888,7 @@ g++ -o client client.cpp</pre>
                     <li>Error handling and robust network application design</li>
                 </ul>
             </div>
-            
+
             <div class="text-center">
                 <h3>Thank You!</h3>
                 <p>Rishav Bishen - 2303129</p>
@@ -866,106 +897,6 @@ g++ -o client client.cpp</pre>
             </div>
         </div>
     </section>
-
-    <script>
-        // Add smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                document.querySelector(targetId).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-        
-        // Add animation for elements when they come into view
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.2
-        });
-        
-        // Apply animation to cards and other elements
-        document.querySelectorAll('.card, .step, .server-client-box, .testimonial, .subtitle').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-        
-        // Add visible class to make elements appear
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                document.querySelectorAll('.visible').forEach(el => {
-                    el.style.opacity = '1';
-                    el.style.transform = 'translateY(0)';
-                });
-            }, 300);
-        });
-        
-        // Add parallax effect to sections
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                const scrollPosition = window.scrollY;
-                const sectionTop = section.offsetTop;
-                const distance = scrollPosition - sectionTop;
-                
-                if (Math.abs(distance) < window.innerHeight) {
-                    section.style.backgroundPositionY = distance * 0.05 + 'px';
-                }
-            });
-        });
-    </script>
-    
-    <style>
-        .visible {
-            opacity: 1 !important;  
-            transform: translateY(0) !important;
-        }
-        
-        /* Add decorative elements */
-        .section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            z-index: 0;
-        }
-        
-        /* Add code highlighting styles */
-        .code-container .keyword {
-            color: #ff79c6;
-        }
-        
-        .code-container .function {
-            color: #50fa7b;
-        }
-        
-        .code-container .string {
-            color: #f1fa8c;
-        }
-        
-        .code-container .comment {
-            color: #6272a4;
-        }
-        
-        /* Add animation for button */
-        .btn {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn::after {
-            content: '';
-            position
 </body>
+
 </html>
